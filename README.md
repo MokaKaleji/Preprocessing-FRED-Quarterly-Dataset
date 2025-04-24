@@ -1,7 +1,8 @@
 # Preprocessing-FRED-Quarterly-Dataset-
 
-**Author:** Moka Kaleji  
-**Affiliation:** Master’s Thesis in Econometrics & Time Series Analysis  
+**Author:** Moka Kaleji • Contact: mohammadkaleji1998@gmail.com 
+
+**Affiliation:** Master’s Thesis, University of Bologna  
 
 This repository contains the R script for cleaning and transforming the FRED-QD macroeconomic dataset as part of my Master’s thesis. It standardizes, outlier-filters, and imputes missing values to prepare the data for factor model estimation.
 
@@ -37,7 +38,3 @@ Preprocessing(QDLT, C = 2)  # More observations
 - [Locally-Stationary-Factor-Model](https://github.com/moka-kaleji/Locally-Stationary-Factor-Model)
 - [Bayesian-Optimized-Locally-Stationary-Factor-Model](https://github.com/moka-kaleji/Bayesian-Optimized-Locally-Stationary-Factor-Model)
 - [Dynamic-Factor-Model](https://github.com/moka-kaleji/Dynamic-Factor-Model)
-
-
-Moka Kaleji • Master’s Thesis, University of Bologna
-Contact: mohammadkaleji1998@gmail.com
