@@ -1,8 +1,9 @@
 ################################################################################
 #                                Data Processing                               #
 ################################################################################
-# Author: Moka Kaleji                                                      
-# Affiliation: Master Thesis in Econometrics and Time Series Analysis             
+# Author: Moka Kaleji • Master’s Thesis, University of Bologna
+Contact: mohammadkaleji1998@gmail.com                                                   
+# Affiliation: Master Thesis in Econometrics             
 #                                                                                 
 # Description:
 # This script executes the preprocessing pipeline for the FRED quarterly dataset
