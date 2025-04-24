@@ -31,5 +31,9 @@ Preprocessing(QDLT, C = 1)  # More variables
 Preprocessing(QDLT, C = 2)  # More observations
 
 
+
+
+
+
 Moka Kaleji • Master’s Thesis, University of Bologna
 Contact: mohammadkaleji1998@gmail.com
