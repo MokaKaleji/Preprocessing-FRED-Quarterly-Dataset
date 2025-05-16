@@ -82,6 +82,8 @@ Preprocessing <- function(QDLT, C = NULL) {
       if (code == 1) {
         # Level series preserved
         transformed <- series
+      } else if (code == 4) {
+        transformed <- 100 * log(series)
       } else if (code == 5) {
         # Log-difference: 100 * delta log(series)
         transformed <- c(NA, diff(100 * log(series)))
@@ -144,10 +146,11 @@ Preprocessing <- function(QDLT, C = NULL) {
       X[outlier_flag] <- NA
       return(list(X = X, out = outlier_flag, n = colSums(outlier_flag, na.rm = TRUE)))
     }
-    
-    QD_IQR <- remove_outliers_IQR(x[, -1])
+    date_col <- QD_Cleaned[, 1]
+    transformation_codes <- QD_Cleaned[1,2:227]
+    QD_IQR <- remove_outliers_IQR(QD_Cleaned[-1, -1])
     QD_IQR_df <- as.data.frame(QD_IQR$X)
-    QD_IQR_df <- rbind(QD_Cleaned[1, 2:ncol(QD_IQR_df)+1], QD_IQR_df)
+    QD_IQR_df <- rbind (transformation_codes ,QD_IQR_df)
     
     transformation_codes <- as.numeric(QD_IQR_df[1, ])
     data_values <- as.data.frame(lapply(QD_IQR_df[-1, ], as.numeric))
@@ -157,6 +160,8 @@ Preprocessing <- function(QDLT, C = NULL) {
       code <- transformation_codes[i]; series <- data_values[[i]]
       if (code == 1) {
         transformed <- series
+      } else if (code == 4) {
+        transformed <- 100 * log(series)
       } else if (code == 5) {
         transformed <- c(NA, diff(100 * log(series)))
       } else if (code == 2) {
