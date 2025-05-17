@@ -6,6 +6,7 @@
 
 Advancing High-Dimensional Factor Models: Integrating Time-Varying 
 Loadings and Transition Matrix with Dynamic Factors.
+
 University of Bologna 
 
 This repository contains the R script for cleaning and transforming the FRED-QD macroeconomic dataset as part of my Master’s thesis. It standardizes, outlier-filters, and imputes missing values to prepare the data for factor model estimation.
